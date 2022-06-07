@@ -13,5 +13,13 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
-  mode: 'development'
+  mode: 'development',
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  }
 };
